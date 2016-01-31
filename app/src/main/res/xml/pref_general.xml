@@ -5,4 +5,12 @@
         android:defaultValue="@string/default_location"
         android:inputType="text"
         android:singleLine="true"/>
+
+    <ListPreference android:title="@string/temp_unit_title"
+        android:key="@string/temp_unit_key"
+        android:defaultValue="@string/default_temp_unit"
+        android:dialogTitle="@string/temp_unit_title"
+        android:entries="@array/pref_temp_keys"
+        android:entryValues="@array/pref_temp_values"
+        />
 </PreferenceScreen>

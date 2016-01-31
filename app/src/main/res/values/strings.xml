@@ -13,4 +13,18 @@
     <string name="location_key" translatable="false">location</string>
     <string name="default_location" translatable="false">500032</string>
 
+    <string name="temp_unit_title">Temperature Unit</string>
+    <string name="temp_unit_key" translatable="false">temp</string>
+    <string name="default_temp_unit" translatable="false">metric</string>
+    
+    <array name="pref_temp_keys">
+        <item>Metric</item>
+        <item>Imperial</item>
+    </array>
+
+    <array name="pref_temp_values" >
+        <item>metric</item>
+        <item>imperial</item>
+    </array>
+
 </resources>

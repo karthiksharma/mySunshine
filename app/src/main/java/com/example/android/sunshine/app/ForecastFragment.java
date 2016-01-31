@@ -128,8 +128,20 @@ public class ForecastFragment extends Fragment {
             long roundedHigh = Math.round(high);
             long roundedLow = Math.round(low);
 
+            SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+            String prefUnit = pref.getString(getString(R.string.temp_unit_key), getString(R.string.default_temp_unit));
+            if(prefUnit.equalsIgnoreCase("imperial")){
+                roundedHigh = convertMetricToImperial(roundedHigh);
+                roundedLow = convertMetricToImperial(roundedLow);
+            }
             String highLowStr = roundedHigh + "/" + roundedLow;
             return highLowStr;
+        }
+
+        private long convertMetricToImperial(long temp){
+            temp *= ((double)9.0/5);
+            temp += 32;
+            return temp;
         }
 
         /**
