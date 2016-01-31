@@ -130,10 +130,14 @@ public class ForecastFragment extends Fragment {
 
             SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getActivity());
             String prefUnit = pref.getString(getString(R.string.temp_unit_key), getString(R.string.default_temp_unit));
-            if(prefUnit.equalsIgnoreCase("imperial")){
+            if(prefUnit.equalsIgnoreCase(getString(R.string.imperial_temp_value))){
                 roundedHigh = convertMetricToImperial(roundedHigh);
                 roundedLow = convertMetricToImperial(roundedLow);
             }
+            else if(!prefUnit.equalsIgnoreCase(getString(R.string.default_temp_unit))){
+                Log.d(LOG_TAG, "Unit Type not found: " + prefUnit);
+            }
+
             String highLowStr = roundedHigh + "/" + roundedLow;
             return highLowStr;
         }

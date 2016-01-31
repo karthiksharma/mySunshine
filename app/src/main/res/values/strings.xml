@@ -16,15 +16,15 @@
     <string name="temp_unit_title">Temperature Unit</string>
     <string name="temp_unit_key" translatable="false">temp</string>
     <string name="default_temp_unit" translatable="false">metric</string>
-    
+    <string name="imperial_temp_value">imperial</string>
     <array name="pref_temp_keys">
         <item>Metric</item>
         <item>Imperial</item>
     </array>
-
     <array name="pref_temp_values" >
         <item>metric</item>
         <item>imperial</item>
     </array>
 
+    <string name="action_map">Map Location</string>
 </resources>
