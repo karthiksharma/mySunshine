@@ -5,5 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="action_refresh" translatable="false">Refresh</string>
+    <string name="title_activity_detail">Weather Today</string>
+    <string name="default_weather_detail_text">Sorry something went wrong</string>
 
 </resources>
